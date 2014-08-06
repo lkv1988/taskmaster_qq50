@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:overScrollMode="never"
+                      android:fadeScrollbars="false"
+                      android:fadingEdge="none"
+                      android:fadingEdgeLength="0dp"
+                      android:scrollbars="none"
+                      android:background="@color/blue"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+        <!-- Drawer, treat it just like a NavigationDrawer -->
+        <FrameLayout
+                android:id="@+id/drawer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@android:drawable/btn_default"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="50dp"
+                    android:paddingLeft="30dp"
+                    android:layout_width="@dimen/drawer_width"
+                    android:layout_height="match_parent">
+                <ImageView
+                        android:src="@android:drawable/ic_btn_speak_now"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <Button
+                        android:text="Test1"
+                        android:layout_marginTop="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <Button
+                        android:text="Test2"
+                        android:layout_marginTop="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <Button
+                        android:text="Test3"
+                        android:layout_marginTop="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </FrameLayout>
+
+        <!-- Main content container, such as place here a fragment -->
+        <FrameLayout
+                android:id="@+id/container"
+                android:background="@color/red"
+                android:layout_marginLeft="@dimen/drawer_width"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+            </FrameLayout>
+</HorizontalScrollView>
